@@ -63,11 +63,16 @@ public class FacadeQuizz implements IFacadeQuizz{
     }
 
     @Override
-    public Map<Question, Integer[]> consulterQuestion() {
-        Map<Question, Integer[]> detailsQuestions = new HashMap<>();
-        for(Map.Entry<String,Question> mp: questionsEnregis.entrySet()){
-            detailsQuestions.put(mp.getValue(),repartitionReponses.get(mp.getKey()));
+    public Map<Question, Integer[]> consulterQuestion() throws PasDeQuestionsException{
+        if(questionsEnregis.isEmpty()){
+            throw new PasDeQuestionsException();
+        }else{
+            Map<Question, Integer[]> detailsQuestions = new HashMap<>();
+            for(Map.Entry<String,Question> mp: questionsEnregis.entrySet()){
+                detailsQuestions.put(mp.getValue(),repartitionReponses.get(mp.getKey()));
+            }
+            return detailsQuestions;
         }
-        return detailsQuestions;
+
     }
 }

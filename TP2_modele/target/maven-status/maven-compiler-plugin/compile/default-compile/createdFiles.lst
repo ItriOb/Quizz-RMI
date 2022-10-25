@@ -3,6 +3,7 @@ Player.class
 exceptions\PseudoDejaExistantException.class
 exceptions\QuestionInexistanteException.class
 IFacadeQuizz.class
+exceptions\PasDeQuestionsException.class
 exceptions\PseudoUtiliseException.class
 exceptions\DonneesIncompletesException.class
 exceptions\PseudoInexistantException.class
