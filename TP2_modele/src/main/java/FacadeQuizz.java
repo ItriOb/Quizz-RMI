@@ -47,7 +47,7 @@ public class FacadeQuizz implements IFacadeQuizz{
             throw new PseudoInexistantException();
         }else if(!questionsEnregis.containsKey(idQuestion)){
             throw new QuestionInexistanteException();
-        }else if(reponse>4 && reponse <1){
+        }else if(reponse>4 || reponse <1){
             throw new ReponseInexistanteException();
         }else{
             joueursInscrits.get(pseudo).addReponse(idQuestion,reponse);
