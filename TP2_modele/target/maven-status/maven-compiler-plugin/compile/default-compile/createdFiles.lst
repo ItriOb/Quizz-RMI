@@ -7,5 +7,6 @@ exceptions\PasDeQuestionsException.class
 exceptions\PseudoUtiliseException.class
 exceptions\DonneesIncompletesException.class
 exceptions\PseudoInexistantException.class
+exceptions\QuestionDejaRepondue.class
 FacadeQuizz.class
 Question.class

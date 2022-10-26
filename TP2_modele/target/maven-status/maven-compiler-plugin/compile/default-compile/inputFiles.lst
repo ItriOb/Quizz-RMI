@@ -6,5 +6,7 @@ C:\Courses\Java Projects\TP2_RMI\TP2_modele\src\main\java\exceptions\PseudoInexi
 C:\Courses\Java Projects\TP2_RMI\TP2_modele\src\main\java\FacadeQuizz.java
 C:\Courses\Java Projects\TP2_RMI\TP2_modele\src\main\java\exceptions\QuestionInexistanteException.java
 C:\Courses\Java Projects\TP2_RMI\TP2_modele\src\main\java\Question.java
+C:\Courses\Java Projects\TP2_RMI\TP2_modele\src\main\java\exceptions\PasDeQuestionsException.java
 C:\Courses\Java Projects\TP2_RMI\TP2_modele\src\main\java\exceptions\PseudoDejaExistantException.java
+C:\Courses\Java Projects\TP2_RMI\TP2_modele\src\main\java\exceptions\QuestionDejaRepondue.java
 C:\Courses\Java Projects\TP2_RMI\TP2_modele\src\main\java\exceptions\DonneesIncompletesException.java

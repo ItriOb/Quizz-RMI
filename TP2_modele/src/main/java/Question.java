@@ -4,11 +4,13 @@ public class Question {
     private String intitule;
     private String[] propReponse;
     private String idQuestion;
+    private Integer[] reparResponse;
 
     public Question(String intitule, String[] propReponse) {
         this.intitule = intitule;
         this.propReponse = propReponse;
         this.idQuestion= UUID.randomUUID().toString();
+        this.reparResponse=new Integer[4];
     }
 
     public String getIntitule() {
@@ -29,6 +31,14 @@ public class Question {
 
     public void setPropReponse(String[] propReponse) {
         this.propReponse = propReponse;
+    }
+
+    public Integer[] getReparResponse() {
+        return reparResponse;
+    }
+
+    public void reponse(int reponse){
+        reparResponse[reponse-1]++;
     }
 
 }

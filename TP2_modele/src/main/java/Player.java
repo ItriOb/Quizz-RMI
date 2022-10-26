@@ -19,7 +19,9 @@ public class Player {
         reponses.put(idQuestion,reponse);
     }
 
-    public Map<String, Integer> getReponses() {
-        return reponses;
+    public boolean isAnswered(String idQuestion){
+        if(reponses.containsKey(idQuestion)){
+            return true;
+        }else return false;
     }
 }
