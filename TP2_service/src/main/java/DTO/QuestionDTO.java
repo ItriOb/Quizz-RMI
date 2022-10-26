@@ -8,11 +8,11 @@ public class QuestionDTO implements Serializable {
     private String intitule;
     private String[] propReponse;
     private String idQuestion;
+    private Integer[] reparReponse;
 
     public QuestionDTO(String intitule, String[] propReponse) {
         this.intitule = intitule;
         this.propReponse = propReponse;
-        this.idQuestion = UUID.randomUUID().toString();
     }
 
     public String getIntitule() {
@@ -33,5 +33,8 @@ public class QuestionDTO implements Serializable {
 
     public void setPropReponse(String[] propReponse) {
         this.propReponse = propReponse;
+    }
+    public Integer[] getReparResponse() {
+        return reparReponse;
     }
 }
