@@ -1,16 +1,20 @@
+
 import DTO.QuestionDTO;
 import exceptions.*;
 
 import java.io.Serializable;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
-public class ServiceImpl extends UnicastRemoteObject implements Service, Serializable {
+public class ServiceImpl extends UnicastRemoteObject implements Service{
     private IFacadeQuizz FacadeQuizz;
 
-    public ServiceImpl() throws RemoteException{
+    public ServiceImpl(int port) throws RemoteException{
+        super(port);
         this.FacadeQuizz = new FacadeQuizz();
     }
 
@@ -31,9 +35,14 @@ public class ServiceImpl extends UnicastRemoteObject implements Service, Seriali
     }
 
     @Override
-    public Map<QuestionDTO, Integer[]> consulterQuestion() throws PasDeQuestionsException, RemoteException {
-        this.FacadeQuizz.consulterQuestion();
-        //you should retrun list of questions
+    public List<QuestionDTO> consulterQuestion() throws PasDeQuestionsException, RemoteException {
+        List<QuestionDTO> questions =new ArrayList<>();
+
+        for(Question q : this.FacadeQuizz.consulterQuestion()){
+            questions.add(new QuestionDTO(q.getIntitule(),q.getPropReponse()));
+        }
+
+        return questions;
 
 
     }
